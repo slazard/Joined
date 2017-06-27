@@ -1,0 +1,49 @@
+// Joined
+
+class Tile {
+
+	int xpos;
+	int ypos;
+
+	Tile adjUp;
+	Tile adjDown;
+	Tile adjLeft;
+	Tile adjRight;
+
+	Tile get adjUp() {
+		retun adjUp;
+	}
+
+	Tile get adjDown() {
+		retun adjDown;
+	}
+
+	Tile get adjLeft() {
+		retun adjLeft;
+	}
+
+	Tile get adjRight() {
+		retun adjRight;
+	}
+
+	boolean adjMatchUp() {
+		return (adjUp.getNumber() == this.getNumber());
+	}
+	boolean adjMatchDown(Tile ajdTile) {
+		return (adjDown.getNumber() == this.getNumber());
+	}
+	boolean adjMatchLeft() {
+		return (adjLeft.getNumber() == this.getNumber());
+	}
+	boolean adjMatchRight() {
+		return(adjRight.getNumber() == this.getNumber());
+	}
+
+	Tile[] matchingTile() {
+		Tile[] Result;
+		if (adjMatchUp()) {Result.add(adjUp)}
+		if (adjMatchDown()) {Result.add(adjDown)}
+		if (adjMatchRight()){Result.add(adjRight)}
+		if (adjMatchLeft()){Result.add(adjLeft)}
+	}
+}
